@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:momentica/core/component/momentica_app_bar.dart';
 import 'package:momentica/core/di/momentica_style.dart';
 import 'package:momentica/core/layout/momentica_layout.dart';
 

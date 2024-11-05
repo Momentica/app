@@ -8,7 +8,6 @@ import 'package:momentica/core/component/momentica_gesture.dart';
 import 'package:momentica/core/di/momentica_style.dart';
 import 'package:momentica/core/layout/momentica_layout.dart';
 import 'package:momentica/core/provider/text_field_focus_provider.dart';
-import 'package:momentica/presentation/sign_up/provider/sign_up_agree_option_controller_provider.dart';
 import 'package:momentica/presentation/sign_up/provider/sign_up_page_controller_provider.dart';
 import 'package:momentica/presentation/sign_up/provider/type/sign_up_page_type.dart';
 import 'package:momentica/presentation/sign_up/widget/sign_up_agree_personal_info_bottom_sheet.dart';
