@@ -82,7 +82,7 @@ class MomenticaTextStyle {
     return TextStyle(
         color: color,
         overflow: overflow,
-        fontSize: 20,
+        fontSize: 16,
         fontFamily: wantedSans,
         fontWeight: FontWeight.w600,
         height: 1.000
