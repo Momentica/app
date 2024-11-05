@@ -8,6 +8,7 @@ import 'package:momentica/core/di/momentica_style.dart';
 import 'package:momentica/core/layout/momentica_layout.dart';
 import 'package:momentica/core/type/suffix_type.dart';
 import 'package:momentica/core/util/number_formatter.dart';
+import 'package:momentica/presentation/sign_in/widget/sign_in_account_action_widget.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
@@ -97,35 +98,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
               ),
               const SizedBox(height: 12),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "비밀번호 찾기",
-                    style: MomenticaTextStyle.body2(
-                      color: MomenticaColor.systemGray600,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    child: Text(
-                      "|",
-                      style: MomenticaTextStyle.body2(
-                        color: MomenticaColor.systemGray600,
-                      ),
-                    ),
-                  ),
-                  MomenticaGesture(
-                    event: () => context.push("/signUp"),
-                    child: Text(
-                      "회원가입하기",
-                      style: MomenticaTextStyle.body2(
-                        color: MomenticaColor.systemGray600,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              const SignInAccountActionWidget(),
               SizedBox(height: MediaQuery.of(context).viewInsets.bottom),
             ],
           ),
