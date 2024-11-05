@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
+import 'package:momentica/core/component/momentica_button.dart';
 import 'package:momentica/core/component/momentica_gesture.dart';
 import 'package:momentica/core/di/momentica_style.dart';
 import 'package:momentica/presentation/sign_up/provider/sign_up_agree_option_controller_provider.dart';
@@ -70,6 +72,19 @@ class SignUpAgreePersonalInfoBottomSheet extends ConsumerWidget {
               const SizedBox(height: 28),
               const SignUpAgreeOptionWidget(type: SignUpAgreeOptionType.terms),
               const SizedBox(height: 36),
+              Padding(
+                padding: const EdgeInsets.only(top: 24, bottom: 12),
+                child: MomenticaButton(
+                  event: () => context.go("/signUpSuccess"),
+                  backgroundColor: MomenticaColor.main,
+                  content: Text(
+                    "완료하기",
+                    style: MomenticaTextStyle.button1(
+                      color: MomenticaColor.white,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
