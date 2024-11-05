@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:momentica/presentation/password/view/password_reset_screen.dart';
 import 'package:momentica/presentation/sign_in/view/sign_in_screen.dart';
 import 'package:momentica/presentation/sign_up/view/sign_up_screen.dart';
 import 'package:momentica/presentation/sign_up/view/sign_up_success_screen.dart';
@@ -29,6 +30,12 @@ final GoRouter momenticaRouter = GoRouter(
       path: "/signUpSuccess",
       builder: (context, state) {
         return const SignUpSuccessScreen();
+      },
+    ),
+    GoRoute(
+      path: "/password",
+      builder: (context, state) {
+        return const PasswordResetScreen();
       },
     ),
   ],
