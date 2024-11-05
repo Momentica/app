@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:momentica/core/component/momentica_gesture.dart';
 import 'package:momentica/core/di/momentica_style.dart';
 
 class MomenticaAppBar extends StatelessWidget implements PreferredSizeWidget {
