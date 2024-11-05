@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
+import 'package:momentica/core/component/momentica_app_bar.dart';
 import 'package:momentica/core/component/momentica_button.dart';
+import 'package:momentica/core/component/momentica_gesture.dart';
 import 'package:momentica/core/component/momentica_text_field.dart';
 import 'package:momentica/core/di/momentica_asset.dart';
 import 'package:momentica/core/di/momentica_style.dart';
 import 'package:momentica/core/layout/momentica_layout.dart';
 import 'package:momentica/core/type/suffix_type.dart';
+import 'package:momentica/core/util/number_formatter.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
@@ -63,6 +67,8 @@ class _SignInScreenState extends State<SignInScreen> {
                 focusNode: phoneFocusNode,
                 caption: "전화번호",
                 type: SuffixType.eraser,
+                textInputType: TextInputType.phone,
+                textInputFormatter: NumberFormatter(),
               ),
               const SizedBox(height: 32),
               MomenticaTextField(
@@ -87,18 +93,40 @@ class _SignInScreenState extends State<SignInScreen> {
                       ),
                     ),
                     const SizedBox(width: 4),
-                    SvgPicture.asset("$iconCoreAsset/rightwards_arrow_icon.svg"),
+                    SvgPicture.asset(
+                        "$iconCoreAsset/rightwards_arrow_icon.svg"),
                   ],
                 ),
               ),
               const SizedBox(height: 12),
-              Center(
-                child: Text(
-                  "비밀번호 찾기",
-                  style: MomenticaTextStyle.body1(
-                    color: MomenticaColor.systemGray600,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "비밀번호 찾기",
+                    style: MomenticaTextStyle.body2(
+                      color: MomenticaColor.systemGray600,
+                    ),
                   ),
-                ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                    child: Text(
+                      "|",
+                      style: MomenticaTextStyle.body2(
+                        color: MomenticaColor.systemGray600,
+                      ),
+                    ),
+                  ),
+                  MomenticaGesture(
+                    event: () => context.push("/signUp"),
+                    child: Text(
+                      "회원가입하기",
+                      style: MomenticaTextStyle.body2(
+                        color: MomenticaColor.systemGray600,
+                      ),
+                    ),
+                  ),
+                ],
               ),
               SizedBox(height: MediaQuery.of(context).viewInsets.bottom),
             ],
