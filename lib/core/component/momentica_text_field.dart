@@ -13,6 +13,7 @@ class MomenticaTextField extends ConsumerStatefulWidget {
 
   final FocusNode focusNode;
 
+  /// 텍스트 필드 타이틀
   final String caption;
 
   final String? hintText, buttonContent;
@@ -21,6 +22,7 @@ class MomenticaTextField extends ConsumerStatefulWidget {
 
   final Widget? suffixIcon;
 
+  /// 버튼 이벤트
   final Function? buttonEvent;
 
   final int? maxLength;
@@ -100,6 +102,7 @@ class _MomenticaTextFieldState extends ConsumerState<MomenticaTextField> {
                 textInputAction: widget.textInputAction,
 
                 decoration: InputDecoration(
+                  /// placeholder >> 기본값
                   hintText: widget.hintText ?? "placeholder",
                   hintStyle: MomenticaTextStyle.caption1(
                     color: MomenticaColor.systemGray300,
@@ -115,6 +118,7 @@ class _MomenticaTextFieldState extends ConsumerState<MomenticaTextField> {
                     borderSide: BorderSide.none,
                   ),
 
+                  /// suffixIcon -> custom 및 다양한 Icon
                   suffixIcon: switch (widget.type) {
                     SuffixType.none => null,
                     SuffixType.eraser => MomenticaGesture(

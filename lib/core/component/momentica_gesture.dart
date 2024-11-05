@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MomenticaGesture extends StatelessWidget {
+  /// 터치 이벤트 실행 범위
   final HitTestBehavior? behavior;
   final Function event;
   final Widget child;
