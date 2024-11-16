@@ -1,0 +1,44 @@
+name: momentica
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+# 테마 컴포넌트 구현 및 Auth 페이지 퍼블리싱
+version: 1.1.0+2
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.0.11
+  go_router: ^14.3.0
+  flutter_riverpod: ^2.6.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^4.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/icon/core/
+    - assets/icon/auth/
+    - assets/image/core/
+
+  fonts:
+    - family: WantedSans
+      fonts:
+        - asset: "assets/font/wanted_sans_semibold.otf"
+          weight: 600
+        - asset: "assets/font/wanted_sans_medium.otf"
+          weight: 500
+        - asset: "assets/font/wanted_sans_regular.otf"
+          weight: 400
