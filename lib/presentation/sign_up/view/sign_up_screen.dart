@@ -134,7 +134,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen>
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: AnimatedContainer(
-                  duration: const Duration(milliseconds: 300),
+                  duration: const Duration(milliseconds: 200),
                   height: 4,
                   width: MediaQuery.of(context).size.width /
                       3 *
