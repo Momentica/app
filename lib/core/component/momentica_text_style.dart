@@ -15,7 +15,7 @@ class MomenticaTextStyle {
       fontSize: 42,
       fontFamily: wantedSans,
       fontWeight: FontWeight.w600,
-      height: 1.000
+      height: 1.192
     );
   }
 
@@ -29,7 +29,7 @@ class MomenticaTextStyle {
         fontSize: 32,
         fontFamily: wantedSans,
         fontWeight: FontWeight.w600,
-        height: 1.000
+        height: 1.193
     );
   }
 
@@ -57,7 +57,21 @@ class MomenticaTextStyle {
         fontSize: 20,
         fontFamily: wantedSans,
         fontWeight: FontWeight.w600,
-        height: 1.000
+        height: 1.195
+    );
+  }
+
+  static TextStyle title3Regular({
+    required Color color,
+    TextOverflow overflow = TextOverflow.visible,
+  }) {
+    return TextStyle(
+        color: color,
+        overflow: overflow,
+        fontSize: 24,
+        fontFamily: wantedSans,
+        fontWeight: FontWeight.w600,
+        height: 1.191
     );
   }
 
@@ -71,7 +85,7 @@ class MomenticaTextStyle {
         fontSize: 18,
         fontFamily: wantedSans,
         fontWeight: FontWeight.w600,
-        height: 1.000
+        height: 1.194
     );
   }
 
@@ -85,7 +99,7 @@ class MomenticaTextStyle {
         fontSize: 16,
         fontFamily: wantedSans,
         fontWeight: FontWeight.w600,
-        height: 1.000
+        height: 1.193
     );
   }
 
@@ -99,7 +113,7 @@ class MomenticaTextStyle {
         fontSize: 14,
         fontFamily: wantedSans,
         fontWeight: FontWeight.w600,
-        height: 1.000
+        height: 1.192
     );
   }
 
@@ -113,7 +127,7 @@ class MomenticaTextStyle {
         fontSize: 14,
         fontFamily: wantedSans,
         fontWeight: FontWeight.w500,
-        height: 1.000
+        height: 1.192
     );
   }
 
@@ -141,7 +155,7 @@ class MomenticaTextStyle {
         fontSize: 14,
         fontFamily: wantedSans,
         fontWeight: FontWeight.w400,
-        height: 1.000
+        height: 1.192
     );
   }
 
@@ -155,7 +169,7 @@ class MomenticaTextStyle {
         fontSize: 12,
         fontFamily: wantedSans,
         fontWeight: FontWeight.w400,
-        height: 1.000
+        height: 1.275
     );
   }
 
@@ -169,7 +183,7 @@ class MomenticaTextStyle {
         fontSize: 14,
         fontFamily: wantedSans,
         fontWeight: FontWeight.w500,
-        height: 1.000
+        height: 1.192
     );
   }
 
@@ -183,7 +197,7 @@ class MomenticaTextStyle {
         fontSize: 12,
         fontFamily: wantedSans,
         fontWeight: FontWeight.w500,
-        height: 1.000
+        height: 1.191
     );
   }
 
@@ -197,7 +211,7 @@ class MomenticaTextStyle {
         fontSize: 16,
         fontFamily: wantedSans,
         fontWeight: FontWeight.w600,
-        height: 1.000
+        height: 1.193
     );
   }
 
@@ -211,7 +225,7 @@ class MomenticaTextStyle {
         fontSize: 12,
         fontFamily: wantedSans,
         fontWeight: FontWeight.w600,
-        height: 1.000
+        height: 1.191
     );
   }
 }
