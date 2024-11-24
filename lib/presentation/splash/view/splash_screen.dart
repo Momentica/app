@@ -24,6 +24,8 @@ class _SplashScreenState extends State<SplashScreen> {
       child: Column(
         children: [
           const SizedBox(height: 240),
+
+          /// Image
           Center(
             child: Image.asset(
               "$imageCoreAsset/momentica_logo_image.png",
