@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:momentica/core/component/momentica_button.dart';
 import 'package:momentica/core/component/momentica_gesture.dart';
-import 'package:momentica/core/di/momentica_router.dart';
 import 'package:momentica/core/di/momentica_style.dart';
 import 'package:momentica/core/layout/momentica_layout.dart';
 import 'package:momentica/presentation/on_boarding/provider/type/on_boarding_page_type.dart';
