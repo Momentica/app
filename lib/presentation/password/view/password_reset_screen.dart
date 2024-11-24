@@ -48,6 +48,7 @@ class _PasswordResetScreenState extends ConsumerState<PasswordResetScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 4),
           child: Row(
             children: [
+              /// Page Pop
               MomenticaGesture(
                 event: () {
                   context.pop();
@@ -88,6 +89,8 @@ class _PasswordResetScreenState extends ConsumerState<PasswordResetScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 20),
+
+            /// Title
             Text(
               "비밀번호 재설정하기",
               style: MomenticaTextStyle.title3(
@@ -95,6 +98,8 @@ class _PasswordResetScreenState extends ConsumerState<PasswordResetScreen> {
               ),
             ),
             const SizedBox(height: 8),
+
+            /// Caption
             Text(
               "입력한 전화번호로 재설정 링크를 보내드려요",
               style: MomenticaTextStyle.subTitle2(
@@ -102,6 +107,8 @@ class _PasswordResetScreenState extends ConsumerState<PasswordResetScreen> {
               ),
             ),
             const SizedBox(height: 32),
+
+            /// Input Number
             MomenticaTextField(
               controller: controller,
               focusNode: focusNode,

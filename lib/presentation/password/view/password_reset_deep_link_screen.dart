@@ -79,6 +79,8 @@ class _PasswordResetDeepLinkScreenState
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 40),
+
+              /// Title
               Text(
                 "비밀번호 재설정하기",
                 style: MomenticaTextStyle.title3(
@@ -86,6 +88,8 @@ class _PasswordResetDeepLinkScreenState
                 ),
               ),
               const SizedBox(height: 40),
+
+              /// Input New Password
               MomenticaTextField(
                 controller: passwordController,
                 focusNode: passwordFocusNode,
@@ -93,12 +97,16 @@ class _PasswordResetDeepLinkScreenState
                 type: SuffixType.password,
               ),
               const SizedBox(height: 32),
+
+              /// Input Password Confirm
               MomenticaTextField(
                 controller: confirmController,
                 focusNode: confirmFocusNode,
                 caption: "새 비밀번호 확인",
                 type: SuffixType.password,
               ),
+
+              /// KeyBoard가 올라왔을 때 화면을 스크롤할 수 있도록 간격 부여
               SizedBox(height: MediaQuery.of(context).viewInsets.bottom),
             ],
           ),

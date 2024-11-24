@@ -11,6 +11,7 @@ class SignInAccountActionWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        /// Find Password
         MomenticaGesture(
           event: () => context.push("/password"),
           child: Text(
@@ -29,6 +30,8 @@ class SignInAccountActionWidget extends StatelessWidget {
             ),
           ),
         ),
+
+        /// Create Account
         MomenticaGesture(
           event: () => context.push("/signUp"),
           child: Text(
