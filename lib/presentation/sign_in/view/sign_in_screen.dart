@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:go_router/go_router.dart';
 import 'package:momentica/core/component/momentica_button.dart';
-import 'package:momentica/core/component/momentica_gesture.dart';
 import 'package:momentica/core/component/momentica_text_field.dart';
 import 'package:momentica/core/di/momentica_style.dart';
 import 'package:momentica/core/layout/momentica_layout.dart';
@@ -80,8 +78,6 @@ class _SignInScreenState extends State<SignInScreen> {
               MomenticaButton(
                 event: () {},
                 backgroundColor: MomenticaColor.main,
-                height: 52,
-                radius: 8,
                 content: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
