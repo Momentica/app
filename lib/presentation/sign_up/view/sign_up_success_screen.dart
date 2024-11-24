@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:momentica/core/component/momentica_button.dart';
-import 'package:momentica/core/di/momentica_asset.dart';
 import 'package:momentica/core/di/momentica_style.dart';
 import 'package:momentica/core/layout/momentica_layout.dart';
 
@@ -13,22 +12,25 @@ class SignUpSuccessScreen extends StatelessWidget {
     return MomenticaLayout(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-        child: MomenticaButton(
-          event: () {},
-          backgroundColor: MomenticaColor.main,
-          content: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "이야기 만들기",
-                style: MomenticaTextStyle.button1(
-                  color: MomenticaColor.white,
+        padding: const EdgeInsets.symmetric(horizontal: 24),
+        child: Padding(
+          padding: const EdgeInsets.only(top: 24, bottom: 12),
+          child: MomenticaButton(
+            event: () {},
+            backgroundColor: MomenticaColor.main,
+            content: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "이야기 만들기",
+                  style: MomenticaTextStyle.button1(
+                    color: MomenticaColor.white,
+                  ),
                 ),
-              ),
-              const SizedBox(width: 4),
-              SvgPicture.asset("$iconCoreAsset/rightwards_arrow_icon.svg"),
-            ],
+                const SizedBox(width: 4),
+                SvgPicture.asset("$iconCoreAsset/rightwards_arrow_icon.svg"),
+              ],
+            ),
           ),
         ),
       ),
