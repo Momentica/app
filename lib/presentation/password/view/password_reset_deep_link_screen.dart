@@ -16,7 +16,8 @@ class PasswordResetDeepLinkScreen extends ConsumerStatefulWidget {
       _PasswordResetDeepLinkScreenState();
 }
 
-class _PasswordResetDeepLinkScreenState extends ConsumerState<PasswordResetDeepLinkScreen> {
+class _PasswordResetDeepLinkScreenState
+    extends ConsumerState<PasswordResetDeepLinkScreen> {
   late TextEditingController passwordController;
   late TextEditingController confirmController;
 
@@ -49,25 +50,25 @@ class _PasswordResetDeepLinkScreenState extends ConsumerState<PasswordResetDeepL
     return MomenticaLayout(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Padding(
-        padding:
-        EdgeInsets.symmetric(horizontal: 24, vertical: focusValue ? 0 : 12),
-        child: MomenticaButton(
-          event: () {
-
-          },
-          backgroundColor: MomenticaColor.main,
-          content: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "비밀번호 재설정",
-                style: MomenticaTextStyle.button1(
-                  color: MomenticaColor.white,
+        padding: const EdgeInsets.symmetric(horizontal: 24),
+        child: Padding(
+          padding: EdgeInsets.only(top: 24, bottom: focusValue ? 0 : 12),
+          child: MomenticaButton(
+            event: () {},
+            backgroundColor: MomenticaColor.main,
+            content: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "비밀번호 재설정",
+                  style: MomenticaTextStyle.button1(
+                    color: MomenticaColor.white,
+                  ),
                 ),
-              ),
-              const SizedBox(width: 4),
-              SvgPicture.asset("$iconCoreAsset/rightwards_arrow_icon.svg"),
-            ],
+                const SizedBox(width: 4),
+                SvgPicture.asset("$iconCoreAsset/rightwards_arrow_icon.svg"),
+              ],
+            ),
           ),
         ),
       ),

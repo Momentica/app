@@ -70,7 +70,7 @@ class MomenticaTextStyle {
         overflow: overflow,
         fontSize: 24,
         fontFamily: wantedSans,
-        fontWeight: FontWeight.w600,
+        fontWeight: FontWeight.w400,
         height: 1.191
     );
   }

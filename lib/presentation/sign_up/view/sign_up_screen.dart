@@ -38,8 +38,8 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen>
   @override
   Widget build(BuildContext context) {
     /// page 관리
-    final pageIndex = ref.watch(signUpPageControllerProvider);
-    final updatePageIndex = ref.read(signUpPageControllerProvider.notifier);
+    final tabIndex = ref.watch(signUpPageControllerProvider);
+    final updateTabIndex = ref.read(signUpPageControllerProvider.notifier);
 
     /// text field 관리
     final focusValue = ref.watch(textFieldFocusProvider);
@@ -57,7 +57,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen>
                     context.pop();
                   } else {
                     _controller.animateTo(_controller.index - 1);
-                    updatePageIndex.animate(index: _controller.index);
+                    updateTabIndex.animate(index: _controller.index);
                   }
                 },
                 child: SvgPicture.asset("$iconCoreAsset/left_arrow_icon.svg"),
@@ -86,36 +86,38 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen>
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Padding(
-        padding:
-            EdgeInsets.symmetric(horizontal: 24, vertical: focusValue ? 0 : 12),
-        child: MomenticaButton(
-          event: () {
-            if (_controller.index == 2) {
-              showModalBottomSheet(
-                context: context,
-                backgroundColor: MomenticaColor.white,
-                builder: (context) {
-                  return const SignUpAgreePersonalInfoBottomSheet();
-                },
-              );
-            } else {
-              _controller.animateTo(_controller.index + 1);
-              updatePageIndex.animate(index: _controller.index);
-            }
-          },
-          backgroundColor: MomenticaColor.main,
-          content: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "다음",
-                style: MomenticaTextStyle.button1(
-                  color: MomenticaColor.white,
+        padding: const EdgeInsets.symmetric(horizontal: 24),
+        child: Padding(
+          padding: EdgeInsets.only(top: 24, bottom: focusValue ? 0 : 12),
+          child: MomenticaButton(
+            event: () {
+              if (_controller.index == 2) {
+                showModalBottomSheet(
+                  context: context,
+                  backgroundColor: MomenticaColor.white,
+                  builder: (context) {
+                    return const SignUpAgreePersonalInfoBottomSheet();
+                  },
+                );
+              } else {
+                _controller.animateTo(_controller.index + 1);
+                updateTabIndex.animate(index: _controller.index);
+              }
+            },
+            backgroundColor: MomenticaColor.main,
+            content: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "다음",
+                  style: MomenticaTextStyle.button1(
+                    color: MomenticaColor.white,
+                  ),
                 ),
-              ),
-              const SizedBox(width: 4),
-              SvgPicture.asset("$iconCoreAsset/rightwards_arrow_icon.svg"),
-            ],
+                const SizedBox(width: 4),
+                SvgPicture.asset("$iconCoreAsset/rightwards_arrow_icon.svg"),
+              ],
+            ),
           ),
         ),
       ),
@@ -138,7 +140,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen>
                   height: 4,
                   width: MediaQuery.of(context).size.width /
                       3 *
-                      (pageIndex.index + 1),
+                      (tabIndex.index + 1),
                   decoration: const BoxDecoration(
                     color: MomenticaColor.systemGray900,
                     borderRadius: BorderRadius.only(
@@ -156,7 +158,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen>
             child: TabBarView(
               controller: _controller,
               physics: const NeverScrollableScrollPhysics(),
-              children: SignUpPageType.values.map((type) => type.page).toList(),
+              children: SignUpPageType.values.map((type) => type.tab).toList(),
             ),
           ),
         ],

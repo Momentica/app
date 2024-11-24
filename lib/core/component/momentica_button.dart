@@ -27,7 +27,7 @@ class MomenticaButton extends StatelessWidget {
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: backgroundColor,
-          borderRadius: BorderRadius.circular(radius ?? 12),
+          borderRadius: BorderRadius.circular(radius ?? 8),
         ),
         child: content,
       ),
