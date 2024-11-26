@@ -55,6 +55,8 @@ class _PasswordResetDeepLinkScreenState
           padding: EdgeInsets.only(top: 24, bottom: focusValue ? 0 : 12),
           child: MomenticaButton(
             event: () {},
+            height: 52,
+            radius: 8,
             backgroundColor: MomenticaColor.main,
             content: Row(
               mainAxisAlignment: MainAxisAlignment.center,

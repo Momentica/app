@@ -17,6 +17,8 @@ class SignUpSuccessScreen extends StatelessWidget {
           padding: const EdgeInsets.only(top: 24, bottom: 12),
           child: MomenticaButton(
             event: () {},
+            height: 52,
+            radius: 8,
             backgroundColor: MomenticaColor.main,
             content: Row(
               mainAxisAlignment: MainAxisAlignment.center,

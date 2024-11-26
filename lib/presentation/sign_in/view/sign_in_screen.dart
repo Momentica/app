@@ -102,6 +102,8 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
                     context.go("/main");
                   }
                 },
+                height: 52,
+                radius: 8,
                 backgroundColor: !emptyValue
                     ? MomenticaColor.systemGray300
                     : MomenticaColor.main,
