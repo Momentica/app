@@ -3,7 +3,8 @@ import 'package:momentica/core/component/momentica_gesture.dart';
 
 class MomenticaButton extends StatelessWidget {
   final Function event;
-  final double? height, width, radius;
+  final double height, radius;
+  final double? width;
   final Color backgroundColor;
   final Widget content;
 
@@ -12,9 +13,9 @@ class MomenticaButton extends StatelessWidget {
     required this.event,
     required this.backgroundColor,
     required this.content,
-    this.height,
+    required this.height,
+    required this.radius,
     this.width,
-    this.radius,
   });
 
   @override
@@ -23,11 +24,11 @@ class MomenticaButton extends StatelessWidget {
       event: () => event(),
       child: Container(
         width: width ?? MediaQuery.of(context).size.width,
-        height: height ?? 52,
+        height: height,
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: backgroundColor,
-          borderRadius: BorderRadius.circular(radius ?? 8),
+          borderRadius: BorderRadius.circular(radius),
         ),
         child: content,
       ),
