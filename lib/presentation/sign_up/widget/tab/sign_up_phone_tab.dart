@@ -70,7 +70,6 @@ class _SignUpPhoneTabState extends State<SignUpPhoneTab> {
             caption: "인증번호",
             type: SuffixType.none,
             textInputType: TextInputType.number,
-            textInputAction: TextInputAction.done,
             buttonContent: "확인",
             buttonEvent: () {},
           ),
