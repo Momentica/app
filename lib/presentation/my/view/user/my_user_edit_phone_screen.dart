@@ -16,7 +16,8 @@ class MyUserEditPhoneScreen extends ConsumerStatefulWidget {
   const MyUserEditPhoneScreen({super.key});
 
   @override
-  ConsumerState<MyUserEditPhoneScreen> createState() => _MyUserEditPhoneScreenState();
+  ConsumerState<MyUserEditPhoneScreen> createState() =>
+      _MyUserEditPhoneScreenState();
 }
 
 class _MyUserEditPhoneScreenState extends ConsumerState<MyUserEditPhoneScreen> {
@@ -101,6 +102,7 @@ class _MyUserEditPhoneScreenState extends ConsumerState<MyUserEditPhoneScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              /// 전화번호 입력
               MomenticaTextField(
                 controller: inputController,
                 focusNode: inputFocusNode,
@@ -112,6 +114,8 @@ class _MyUserEditPhoneScreenState extends ConsumerState<MyUserEditPhoneScreen> {
                 buttonEvent: () {},
               ),
               const SizedBox(height: 32),
+
+              /// 인증번호 입력
               MomenticaTextField(
                 controller: confirmController,
                 focusNode: confirmFocusNode,

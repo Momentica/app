@@ -108,6 +108,7 @@ class _MyUserEditPasswordScreenState
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              /// 이전 비밀번호 입력
               MomenticaTextField(
                 controller: previousController,
                 focusNode: previousFocusNode,
@@ -115,6 +116,8 @@ class _MyUserEditPasswordScreenState
                 type: SuffixType.password,
               ),
               const SizedBox(height: 32),
+
+              /// 새 비밀번호 입력
               MomenticaTextField(
                 controller: nextController,
                 focusNode: nextFocusNode,
@@ -122,6 +125,8 @@ class _MyUserEditPasswordScreenState
                 type: SuffixType.password,
               ),
               const SizedBox(height: 32),
+
+              /// 새 비밀번호 재입력
               MomenticaTextField(
                 controller: confirmController,
                 focusNode: confirmFocusNode,
@@ -129,6 +134,8 @@ class _MyUserEditPasswordScreenState
                 type: SuffixType.password,
               ),
               const SizedBox(height: 36),
+
+              /// 비밀번호 찾기 버튼
               Text(
                 "비밀번호 찾기",
                 style: MomenticaTextStyle.body1(

@@ -44,24 +44,31 @@ class _MyUserScreenState extends State<MyUserScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            /// 이름
             MyUserInfoWidget(
               event: () => context.push("/myUserEditName"),
               caption: "이름",
               value: "강해민",
             ),
             const SizedBox(height: 36),
+
+            /// 전화번호
             MyUserInfoWidget(
               event: () => context.push("/myUserEditPhone"),
               caption: "전화번호",
               value: "010-5656-2523",
             ),
             const SizedBox(height: 36),
+
+            /// 비밀번호 obscure character로 표기
             MyUserInfoWidget(
               event: () => context.push("/myUserEditPassword"),
               caption: "비밀번호",
               value: "강해민",
             ),
             const SizedBox(height: 32),
+
+            /// 회원 탈퇴 버튼
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

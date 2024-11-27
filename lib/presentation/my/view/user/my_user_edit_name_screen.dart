@@ -91,6 +91,7 @@ class _MyUserEditNameScreenState extends ConsumerState<MyUserEditNameScreen> {
           padding: const EdgeInsets.all(24),
           child: Column(
             children: [
+              /// 이름 입력
               MomenticaTextField(
                 controller: nameController,
                 focusNode: nameFocusNode,
