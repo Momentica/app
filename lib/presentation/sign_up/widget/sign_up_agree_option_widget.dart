@@ -65,7 +65,7 @@ class SignUpAgreeOptionWidget extends ConsumerWidget {
             ),
           ],
         ),
-        SvgPicture.asset("$iconCoreAsset/right_arrow_icon.svg"),
+        SvgPicture.asset("$iconCoreAsset/short_right_arrow_icon.svg"),
       ],
     );
   }
