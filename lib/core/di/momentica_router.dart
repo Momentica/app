@@ -1,5 +1,15 @@
 import 'package:go_router/go_router.dart';
 import 'package:momentica/presentation/main/view/main_screen.dart';
+import 'package:momentica/presentation/my/view/my_address_screen.dart';
+import 'package:momentica/presentation/my/view/my_counselor_screen.dart';
+import 'package:momentica/presentation/my/view/my_order_screen.dart';
+import 'package:momentica/presentation/my/view/my_question_screen.dart';
+import 'package:momentica/presentation/my/view/my_screen.dart';
+import 'package:momentica/presentation/my/view/my_terms_screen.dart';
+import 'package:momentica/presentation/my/view/user/my_user_edit_name_screen.dart';
+import 'package:momentica/presentation/my/view/user/my_user_edit_password_screen.dart';
+import 'package:momentica/presentation/my/view/user/my_user_edit_phone_screen.dart';
+import 'package:momentica/presentation/my/view/user/my_user_screen.dart';
 import 'package:momentica/presentation/on_boarding/view/on_boarding_screen.dart';
 import 'package:momentica/presentation/password/view/password_reset_screen.dart';
 import 'package:momentica/presentation/sign_in/view/sign_in_screen.dart';
@@ -57,6 +67,71 @@ final GoRouter momenticaRouter = GoRouter(
       path: "/main",
       builder: (context, state) {
         return const MainScreen();
+      },
+    ),
+
+    /// My
+    GoRoute(
+      path: "/my",
+      builder: (context, state) {
+        return const MyScreen();
+      },
+    ),
+
+    /// MyUser
+    GoRoute(
+      path: "/myUser",
+      builder: (context, state) {
+        return const MyUserScreen();
+      },
+    ),
+    GoRoute(
+      path: "/myUserEditName",
+      builder: (context, state) {
+        return const MyUserEditNameScreen();
+      },
+    ),
+    GoRoute(
+      path: "/myUserEditPhone",
+      builder: (context, state) {
+        return const MyUserEditPhoneScreen();
+      },
+    ),
+    GoRoute(
+      path: "/myUserEditPassword",
+      builder: (context, state) {
+        return const MyUserEditPasswordScreen();
+      },
+    ),
+
+    GoRoute(
+      path: "/myAddress",
+      builder: (context, state) {
+        return const MyAddressScreen();
+      },
+    ),
+    GoRoute(
+      path: "/myOrder",
+      builder: (context, state) {
+        return const MyOrderScreen();
+      },
+    ),
+    GoRoute(
+      path: "/myQuestion",
+      builder: (context, state) {
+        return const MyQuestionScreen();
+      },
+    ),
+    GoRoute(
+      path: "/myCounselor",
+      builder: (context, state) {
+        return const MyCounselorScreen();
+      },
+    ),
+    GoRoute(
+      path: "/myTerms",
+      builder: (context, state) {
+        return const MyTermsScreen();
       },
     ),
   ],
