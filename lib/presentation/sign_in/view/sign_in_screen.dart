@@ -92,6 +92,7 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
                 focusNode: passwordFocusNode,
                 caption: "비밀번호",
                 type: SuffixType.password,
+                textInputAction: TextInputAction.done,
               ),
               const SizedBox(height: 52),
 

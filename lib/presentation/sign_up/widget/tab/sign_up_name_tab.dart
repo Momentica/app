@@ -48,6 +48,7 @@ class _SignUpNameTabState extends State<SignUpNameTab> {
             focusNode: nameFocusNode,
             caption: "이름",
             type: SuffixType.eraser,
+            textInputAction: TextInputAction.done,
           ),
         ],
       ),

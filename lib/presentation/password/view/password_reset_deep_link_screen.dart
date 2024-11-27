@@ -106,6 +106,7 @@ class _PasswordResetDeepLinkScreenState
                 focusNode: confirmFocusNode,
                 caption: "새 비밀번호 확인",
                 type: SuffixType.password,
+                textInputAction: TextInputAction.done,
               ),
 
               /// KeyBoard가 올라왔을 때 화면을 스크롤할 수 있도록 간격 부여

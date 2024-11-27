@@ -132,6 +132,7 @@ class _MyUserEditPasswordScreenState
                 focusNode: confirmFocusNode,
                 caption: "새 비밀번호 확인",
                 type: SuffixType.password,
+                textInputAction: TextInputAction.done,
               ),
               const SizedBox(height: 36),
 

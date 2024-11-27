@@ -64,6 +64,7 @@ class _SignUpPasswordTabState extends State<SignUpPasswordTab> {
             focusNode: confirmFocusNode,
             caption: "비밀번호 확인",
             type: SuffixType.password,
+            textInputAction: TextInputAction.done,
           ),
         ],
       ),

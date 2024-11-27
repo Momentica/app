@@ -97,6 +97,7 @@ class _MyUserEditNameScreenState extends ConsumerState<MyUserEditNameScreen> {
                 focusNode: nameFocusNode,
                 caption: "이름",
                 type: SuffixType.none,
+                textInputAction: TextInputAction.done,
               ),
               SizedBox(height: MediaQuery.of(context).viewInsets.bottom),
             ],

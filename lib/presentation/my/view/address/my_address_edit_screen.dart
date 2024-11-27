@@ -164,6 +164,7 @@ class _MyAddressEditScreenState extends ConsumerState<MyAddressEditScreen> {
                 hintText: "전화번호",
                 type: SuffixType.none,
                 textInputType: TextInputType.number,
+                textInputAction: TextInputAction.done,
                 textInputFormatter: NumberFormatter(),
               ),
               SizedBox(height: MediaQuery.of(context).viewInsets.bottom),

@@ -117,6 +117,7 @@ class _PasswordResetScreenState extends ConsumerState<PasswordResetScreen> {
               caption: "전화번호",
               textInputType: TextInputType.phone,
               textInputFormatter: NumberFormatter(),
+              textInputAction: TextInputAction.done,
               type: SuffixType.eraser,
             ),
           ],
