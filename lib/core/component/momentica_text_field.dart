@@ -13,8 +13,8 @@ class MomenticaTextField extends ConsumerStatefulWidget {
 
   final FocusNode focusNode;
 
-  /// 높이, 너비, 버튼의 너비
-  final double? width, height, buttonWidth;
+  /// 높이, 너비, 버튼의 너비, 외곽선 굴곡
+  final double? width, height, buttonWidth, radius;
 
   /// 제목, 힌트, 버튼의 내용
   final String? caption, hintText, buttonContent;
@@ -53,6 +53,7 @@ class MomenticaTextField extends ConsumerStatefulWidget {
     this.suffixIcon,
     this.maxLength,
     this.maxLines,
+    this.radius = 12,
     this.textInputAction = TextInputAction.next,
     this.textInputType = TextInputType.text,
     this.textInputFormatter,
@@ -161,7 +162,7 @@ class _MomenticaTextFieldState extends ConsumerState<MomenticaTextField> {
 
                     /// 텍스트 필드가 포커스 되었을 때
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
+                      borderRadius: BorderRadius.circular(widget.radius!),
                       borderSide: const BorderSide(
                         color: MomenticaColor.main,
                         strokeAlign: BorderSide.strokeAlignInside,
@@ -171,7 +172,7 @@ class _MomenticaTextFieldState extends ConsumerState<MomenticaTextField> {
 
                     /// 텍스트 필드가 포커스 되지 않았을 때
                     enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
+                      borderRadius: BorderRadius.circular(widget.radius!),
                       borderSide: const BorderSide(
                         color: MomenticaColor.systemGray50,
                         strokeAlign: BorderSide.strokeAlignInside,
