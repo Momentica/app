@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:momentica/presentation/main/view/main_screen.dart';
-import 'package:momentica/presentation/my/view/my_address_screen.dart';
+import 'package:momentica/presentation/my/view/address/my_address_edit_screen.dart';
+import 'package:momentica/presentation/my/view/address/my_address_screen.dart';
 import 'package:momentica/presentation/my/view/my_counselor_screen.dart';
 import 'package:momentica/presentation/my/view/my_order_screen.dart';
 import 'package:momentica/presentation/my/view/my_question_screen.dart';
@@ -104,10 +105,17 @@ final GoRouter momenticaRouter = GoRouter(
       },
     ),
 
+    /// MyAddress
     GoRoute(
       path: "/myAddress",
       builder: (context, state) {
         return const MyAddressScreen();
+      },
+    ),
+    GoRoute(
+      path: "/myAddressEdit",
+      builder: (context, state) {
+        return const MyAddressEditScreen();
       },
     ),
     GoRoute(
