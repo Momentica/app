@@ -104,6 +104,8 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen>
                 updateTabIndex.animate(index: _controller.index);
               }
             },
+            height: 52,
+            radius: 8,
             backgroundColor: MomenticaColor.main,
             content: Row(
               mainAxisAlignment: MainAxisAlignment.center,

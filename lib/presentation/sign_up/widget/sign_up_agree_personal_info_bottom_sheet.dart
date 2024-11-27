@@ -76,6 +76,8 @@ class SignUpAgreePersonalInfoBottomSheet extends ConsumerWidget {
                 padding: const EdgeInsets.only(top: 24, bottom: 12),
                 child: MomenticaButton(
                   event: () => context.go("/signUpSuccess"),
+                  height: 52,
+                  radius: 8,
                   backgroundColor: MomenticaColor.main,
                   content: Text(
                     "완료하기",

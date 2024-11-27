@@ -44,6 +44,8 @@ class _OnBoardingScreenState extends ConsumerState<OnBoardingScreen>
           padding: const EdgeInsets.only(top: 24, bottom: 12),
           child: MomenticaButton(
             event: () => context.go("/signIn"),
+            height: 52,
+            radius: 8,
             backgroundColor: MomenticaColor.main,
             content: Text(
               "시작하기",
@@ -89,7 +91,9 @@ class _OnBoardingScreenState extends ConsumerState<OnBoardingScreen>
           Expanded(
             child: TabBarView(
               controller: _controller,
-              children: OnBoardingPageType.values.map((type) => OnBoardingTab(type: type)).toList(),
+              children: OnBoardingPageType.values
+                  .map((type) => OnBoardingTab(type: type))
+                  .toList(),
             ),
           ),
         ],

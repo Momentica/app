@@ -79,7 +79,7 @@ class _MomenticaTextFieldState extends ConsumerState<MomenticaTextField> {
               child: TextField(
                 controller: widget.controller,
                 focusNode: widget.focusNode,
-                style: MomenticaTextStyle.caption1(
+                style: MomenticaTextStyle.caption2(
                   color: MomenticaColor.black,
                 ),
 
@@ -104,7 +104,7 @@ class _MomenticaTextFieldState extends ConsumerState<MomenticaTextField> {
                 decoration: InputDecoration(
                   /// placeholder >> 기본값
                   hintText: widget.hintText ?? "placeholder",
-                  hintStyle: MomenticaTextStyle.caption1(
+                  hintStyle: MomenticaTextStyle.caption2(
                     color: MomenticaColor.systemGray300,
                   ),
 
@@ -195,6 +195,7 @@ class _MomenticaTextFieldState extends ConsumerState<MomenticaTextField> {
                   width: 80,
                   height: 48,
                   event: () => widget.buttonEvent!(),
+                  radius: 12,
                   backgroundColor: widget.controller.text.isEmpty
                       ? MomenticaColor.systemGray100
                       : MomenticaColor.main,
