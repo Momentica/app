@@ -99,16 +99,11 @@ class _MyAddressEditScreenState extends ConsumerState<MyAddressEditScreen> {
             height: 52,
             radius: 8,
             backgroundColor: MomenticaColor.main,
-            content: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "완료",
-                  style: MomenticaTextStyle.button1(
-                    color: MomenticaColor.white,
-                  ),
-                ),
-              ],
+            content: Text(
+              "완료",
+              style: MomenticaTextStyle.button1(
+                color: MomenticaColor.white,
+              ),
             ),
           ),
         ),

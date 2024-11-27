@@ -82,16 +82,11 @@ class _MyUserEditPhoneScreenState extends ConsumerState<MyUserEditPhoneScreen> {
             height: 52,
             radius: 8,
             backgroundColor: MomenticaColor.main,
-            content: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "휴대폰 번호 변경",
-                  style: MomenticaTextStyle.button1(
-                    color: MomenticaColor.white,
-                  ),
-                ),
-              ],
+            content: Text(
+              "휴대폰 번호 변경",
+              style: MomenticaTextStyle.button1(
+                color: MomenticaColor.white,
+              ),
             ),
           ),
         ),
