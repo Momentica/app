@@ -3,10 +3,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:momentica/core/component/momentica_gesture.dart';
 import 'package:momentica/core/di/momentica_style.dart';
-import 'package:momentica/core/type/my/my_type.dart';
+import 'package:momentica/presentation/my/provider/type/my_page_type.dart';
 
 class MyFunctionWidget extends StatelessWidget {
-  final MyType type;
+  final MyPageType type;
 
   const MyFunctionWidget({
     super.key,

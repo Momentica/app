@@ -5,7 +5,7 @@ import 'package:momentica/core/component/momentica_app_bar.dart';
 import 'package:momentica/core/component/momentica_gesture.dart';
 import 'package:momentica/core/di/momentica_style.dart';
 import 'package:momentica/core/layout/momentica_layout.dart';
-import 'package:momentica/core/type/my/my_type.dart';
+import 'package:momentica/presentation/my/provider/type/my_page_type.dart';
 import 'package:momentica/presentation/my/widget/my_function_caption_widget.dart';
 import 'package:momentica/presentation/my/widget/my_function_widget.dart';
 
@@ -44,10 +44,10 @@ class MyScreen extends StatelessWidget {
             const MyFunctionCaptionWidget(caption: "정보"),
             /// Spread 연산자 (...) >> 항목들을 나열함.
             /// 아래 코드에선 MyFunctionWidget을 나열할 때 사용함.
-            ...List.generate(3, (index) => MyFunctionWidget(type: MyType.values.elementAt(index))),
+            ...List.generate(3, (index) => MyFunctionWidget(type: MyPageType.values.elementAt(index))),
             const SizedBox(height: 24),
             const MyFunctionCaptionWidget(caption: "도움말"),
-            ...List.generate(3, (index) => MyFunctionWidget(type: MyType.values.elementAt(index + 3))),
+            ...List.generate(3, (index) => MyFunctionWidget(type: MyPageType.values.elementAt(index + 3))),
           ],
         ),
       ),

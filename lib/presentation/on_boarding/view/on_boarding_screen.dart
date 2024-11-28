@@ -5,7 +5,7 @@ import 'package:momentica/core/component/momentica_button.dart';
 import 'package:momentica/core/component/momentica_gesture.dart';
 import 'package:momentica/core/di/momentica_style.dart';
 import 'package:momentica/core/layout/momentica_layout.dart';
-import 'package:momentica/presentation/on_boarding/provider/type/on_boarding_page_type.dart';
+import 'package:momentica/presentation/on_boarding/provider/type/on_boarding_tab_type.dart';
 import 'package:momentica/presentation/on_boarding/widget/tab/on_boarding_tab.dart';
 
 class OnBoardingScreen extends ConsumerStatefulWidget {
@@ -23,7 +23,7 @@ class _OnBoardingScreenState extends ConsumerState<OnBoardingScreen>
   void initState() {
     super.initState();
     _controller =
-        TabController(length: OnBoardingPageType.values.length, vsync: this);
+        TabController(length: OnBoardingTabType.values.length, vsync: this);
     _controller.animation!.addListener(() {
       int index = _controller.index + _controller.offset.round();
 
@@ -63,7 +63,7 @@ class _OnBoardingScreenState extends ConsumerState<OnBoardingScreen>
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(
-              OnBoardingPageType.values.length,
+              OnBoardingTabType.values.length,
               (index) {
                 return MomenticaGesture(
                   event: () {
@@ -91,7 +91,7 @@ class _OnBoardingScreenState extends ConsumerState<OnBoardingScreen>
           Expanded(
             child: TabBarView(
               controller: _controller,
-              children: OnBoardingPageType.values
+              children: OnBoardingTabType.values
                   .map((type) => OnBoardingTab(type: type))
                   .toList(),
             ),

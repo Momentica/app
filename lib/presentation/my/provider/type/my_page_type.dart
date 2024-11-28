@@ -1,6 +1,6 @@
 import 'package:momentica/core/di/momentica_style.dart';
 
-enum MyType {
+enum MyPageType {
   user(
     icon: "$iconMyAsset/user_icon.svg",
     caption: "내 정보",
@@ -28,7 +28,7 @@ enum MyType {
 
   final String icon, caption;
 
-  const MyType({
+  const MyPageType({
     required this.icon,
     required this.caption,
   });

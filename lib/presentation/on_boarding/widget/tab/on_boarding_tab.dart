@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:momentica/core/di/momentica_style.dart';
-import 'package:momentica/presentation/on_boarding/provider/type/on_boarding_page_type.dart';
+import 'package:momentica/presentation/on_boarding/provider/type/on_boarding_tab_type.dart';
 
 class OnBoardingTab extends StatelessWidget {
-  final OnBoardingPageType type;
+  final OnBoardingTabType type;
 
   const OnBoardingTab({
     super.key,
