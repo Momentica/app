@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:momentica/core/component/momentica_button.dart';
-import 'package:momentica/core/component/momentica_gesture.dart';
 import 'package:momentica/core/di/momentica_style.dart';
 import 'package:momentica/core/layout/momentica_layout.dart';
 import 'package:momentica/presentation/on_boarding/provider/type/on_boarding_tab_type.dart';
+import 'package:momentica/presentation/on_boarding/widget/on_boarding_tab_switch.dart';
 import 'package:momentica/presentation/on_boarding/widget/tab/on_boarding_tab.dart';
 
 class OnBoardingScreen extends ConsumerStatefulWidget {
@@ -35,7 +35,6 @@ class _OnBoardingScreenState extends ConsumerState<OnBoardingScreen>
 
   @override
   Widget build(BuildContext context) {
-    const double size = 8;
     return MomenticaLayout(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Padding(
@@ -60,33 +59,7 @@ class _OnBoardingScreenState extends ConsumerState<OnBoardingScreen>
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const SizedBox(height: 32),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: List.generate(
-              OnBoardingTabType.values.length,
-              (index) {
-                return MomenticaGesture(
-                  event: () {
-                    if (_controller.index != index) {
-                      _controller.index = index;
-                    }
-                  },
-                  child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 300),
-                    margin: const EdgeInsets.symmetric(horizontal: 6),
-                    width: size,
-                    height: size,
-                    decoration: BoxDecoration(
-                      color: _controller.index == index
-                          ? MomenticaColor.systemGray900
-                          : MomenticaColor.systemGray100,
-                      shape: BoxShape.circle,
-                    ),
-                  ),
-                );
-              },
-            ),
-          ),
+          OnBoardingTabSwitch(controller: _controller),
           const SizedBox(height: 40),
           Expanded(
             child: TabBarView(
