@@ -115,6 +115,7 @@ class _PasswordResetScreenState extends ConsumerState<PasswordResetScreen> {
               controller: controller,
               focusNode: focusNode,
               caption: "전화번호",
+              hintText: "숫자만 입력해주세요.",
               textInputType: TextInputType.phone,
               textInputFormatter: NumberFormatter(),
               textInputAction: TextInputAction.done,

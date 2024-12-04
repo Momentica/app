@@ -91,6 +91,7 @@ class _MyUserEditNameScreenState extends ConsumerState<MyUserEditNameScreen> {
                 controller: nameController,
                 focusNode: nameFocusNode,
                 caption: "이름",
+                hintText: "본명을 입력해주세요.",
                 type: SuffixType.none,
                 textInputAction: TextInputAction.done,
               ),
