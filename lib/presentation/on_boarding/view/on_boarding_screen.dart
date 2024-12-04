@@ -42,10 +42,17 @@ class _OnBoardingScreenState extends ConsumerState<OnBoardingScreen>
         child: Padding(
           padding: const EdgeInsets.only(top: 24, bottom: 12),
           child: MomenticaButton(
-            event: () => context.go("/signIn"),
+            event: () {
+              if (_controller.index == OnBoardingTabType.values.length - 1) {
+                context.push("/signIn");
+              }
+            },
             height: 52,
             radius: 8,
-            backgroundColor: MomenticaColor.main,
+            backgroundColor:
+                _controller.index == OnBoardingTabType.values.length - 1
+                    ? MomenticaColor.main
+                    : MomenticaColor.systemGray300,
             content: Text(
               "시작하기",
               style: MomenticaTextStyle.button1(
