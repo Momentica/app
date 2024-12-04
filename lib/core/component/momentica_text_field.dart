@@ -13,19 +13,18 @@ class MomenticaTextField extends ConsumerStatefulWidget {
 
   final FocusNode focusNode;
 
-  /// 높이, 너비, 버튼의 너비, 외곽선 굴곡
-  final double? width, height, buttonWidth, radius;
+  final double? width, height, radius, buttonWidth, buttonRadius;
 
   /// 제목, 힌트, 버튼의 내용
   final String? caption, hintText, buttonContent;
 
-  /// 자동 포커싱
-  final bool? autofocus;
-
-  final Widget? suffixIcon;
-
   /// 버튼 이벤트
   final Function? buttonEvent;
+
+  /// 자동 포커싱
+  final bool? autofocus, counter;
+
+  final Widget? suffixIcon;
 
   final int? maxLength, maxLines;
 
@@ -42,18 +41,20 @@ class MomenticaTextField extends ConsumerStatefulWidget {
     required this.controller,
     required this.focusNode,
     required this.type,
-    this.buttonWidth,
     this.height,
     this.width,
+    this.buttonWidth,
     this.caption,
     this.hintText,
-    this.autofocus = false,
     this.buttonContent,
-    this.buttonEvent,
+    this.autofocus = false,
+    this.counter = false,
     this.suffixIcon,
     this.maxLength,
-    this.maxLines,
+    this.maxLines = 1,
     this.radius = 12,
+    this.buttonRadius = 12,
+    this.buttonEvent,
     this.textInputAction = TextInputAction.next,
     this.textInputType = TextInputType.text,
     this.textInputFormatter,
@@ -74,17 +75,40 @@ class _MomenticaTextFieldState extends ConsumerState<MomenticaTextField> {
       children: [
         /// 제목이 없는 경우도 존재함.
         if (widget.caption != null)
-        Padding(
-          padding: const EdgeInsets.only(bottom: 8),
-          child: Text(
-            widget.caption!,
-            style: MomenticaTextStyle.label1(
-              color: MomenticaColor.black,
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  widget.caption!,
+                  style: MomenticaTextStyle.label1(
+                    color: MomenticaColor.black,
+                  ),
+                ),
+                if (widget.counter! && widget.maxLength != null)
+                  RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: widget.controller.text.length.toString(),
+                          style: MomenticaTextStyle.caption3(
+                            color: MomenticaColor.black,
+                          ),
+                        ),
+                        TextSpan(
+                          text: "/${widget.maxLength}",
+                          style: MomenticaTextStyle.caption3(
+                            color: MomenticaColor.systemGray500,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+              ],
             ),
           ),
-        ),
         Row(
-          mainAxisSize: MainAxisSize.min,
           children: [
             Expanded(
               child: SizedBox(
@@ -105,6 +129,8 @@ class _MomenticaTextFieldState extends ConsumerState<MomenticaTextField> {
 
                   maxLength: widget.maxLength,
 
+                  maxLines: widget.maxLines,
+
                   obscureText: widget.type == SuffixType.password && !_isClicked
                       ? true
                       : false,
@@ -122,11 +148,13 @@ class _MomenticaTextFieldState extends ConsumerState<MomenticaTextField> {
                       color: MomenticaColor.systemGray300,
                     ),
 
+                    counterText: "",
 
                     filled: true,
                     fillColor: MomenticaColor.systemGray50,
 
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 12),
+                    contentPadding:
+                        const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
 
                     border: const OutlineInputBorder(
                       borderSide: BorderSide.none,
@@ -210,7 +238,7 @@ class _MomenticaTextFieldState extends ConsumerState<MomenticaTextField> {
                   width: widget.buttonWidth ?? 80,
                   height: widget.height ?? 48,
                   event: () => widget.buttonEvent!(),
-                  radius: 12,
+                  radius: widget.buttonRadius ?? 12,
                   backgroundColor: widget.controller.text.isEmpty
                       ? MomenticaColor.systemGray100
                       : MomenticaColor.main,
