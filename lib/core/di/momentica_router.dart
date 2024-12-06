@@ -4,7 +4,7 @@ import 'package:momentica/presentation/my/view/address/my_address_edit_screen.da
 import 'package:momentica/presentation/my/view/address/my_address_screen.dart';
 import 'package:momentica/presentation/my/view/counselor/my_counselor_screen.dart';
 import 'package:momentica/presentation/my/view/my_order_screen.dart';
-import 'package:momentica/presentation/my/view/my_question_screen.dart';
+import 'package:momentica/presentation/my/view/question/my_question_screen.dart';
 import 'package:momentica/presentation/my/view/my_screen.dart';
 import 'package:momentica/presentation/my/view/my_terms_screen.dart';
 import 'package:momentica/presentation/my/view/user/my_user_edit_name_screen.dart';
