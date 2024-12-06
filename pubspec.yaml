@@ -39,6 +39,9 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/diary/bookmark/
+    - assets/diary/photo/
+    - assets/diary/tick/
     - assets/icon/core/
     - assets/icon/auth/
     - assets/icon/my/
