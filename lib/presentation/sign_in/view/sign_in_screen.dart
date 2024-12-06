@@ -82,6 +82,7 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
                 controller: phoneController,
                 focusNode: phoneFocusNode,
                 caption: "전화번호",
+                hintText: "숫자만 입력해주세요.",
                 type: SuffixType.eraser,
                 textInputType: TextInputType.phone,
                 textInputFormatter: NumberFormatter(),
@@ -91,7 +92,9 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
                 controller: passwordController,
                 focusNode: passwordFocusNode,
                 caption: "비밀번호",
+                hintText: "8자 이상, 영어 숫자 조합입니다.",
                 type: SuffixType.password,
+                textInputAction: TextInputAction.done,
               ),
               const SizedBox(height: 52),
 

@@ -88,16 +88,11 @@ class _MyUserEditPasswordScreenState
             height: 52,
             radius: 8,
             backgroundColor: MomenticaColor.main,
-            content: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "비밀번호 변경",
-                  style: MomenticaTextStyle.button1(
-                    color: MomenticaColor.white,
-                  ),
-                ),
-              ],
+            content: Text(
+              "비밀번호 변경",
+              style: MomenticaTextStyle.button1(
+                color: MomenticaColor.white,
+              ),
             ),
           ),
         ),
@@ -108,27 +103,38 @@ class _MyUserEditPasswordScreenState
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              /// 이전 비밀번호 입력
               MomenticaTextField(
                 controller: previousController,
                 focusNode: previousFocusNode,
                 caption: "이전 비밀번호",
+                hintText: "8자 이상, 영어 숫자 조합입니다.",
                 type: SuffixType.password,
               ),
               const SizedBox(height: 32),
+
+              /// 새 비밀번호 입력
               MomenticaTextField(
                 controller: nextController,
                 focusNode: nextFocusNode,
                 caption: "새 비밀번호",
+                hintText: "새로운 비밀번호를 입력해주세요.",
                 type: SuffixType.password,
               ),
               const SizedBox(height: 32),
+
+              /// 새 비밀번호 재입력
               MomenticaTextField(
                 controller: confirmController,
                 focusNode: confirmFocusNode,
                 caption: "새 비밀번호 확인",
+                hintText: "새 비밀번호를 다시 입력해주세요.",
                 type: SuffixType.password,
+                textInputAction: TextInputAction.done,
               ),
               const SizedBox(height: 36),
+
+              /// 비밀번호 찾기 버튼
               Text(
                 "비밀번호 찾기",
                 style: MomenticaTextStyle.body1(

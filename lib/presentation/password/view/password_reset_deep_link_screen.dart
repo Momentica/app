@@ -96,6 +96,7 @@ class _PasswordResetDeepLinkScreenState
                 controller: passwordController,
                 focusNode: passwordFocusNode,
                 caption: "새 비밀번호",
+                hintText: "8자 이상, 영어 숫자 조합으로 입력해주세요.",
                 type: SuffixType.password,
               ),
               const SizedBox(height: 32),
@@ -105,7 +106,9 @@ class _PasswordResetDeepLinkScreenState
                 controller: confirmController,
                 focusNode: confirmFocusNode,
                 caption: "새 비밀번호 확인",
+                hintText: "새 비밀번호를 다시 입력해주세요.",
                 type: SuffixType.password,
+                textInputAction: TextInputAction.done,
               ),
 
               /// KeyBoard가 올라왔을 때 화면을 스크롤할 수 있도록 간격 부여

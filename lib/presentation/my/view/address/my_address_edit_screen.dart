@@ -10,30 +10,57 @@ import 'package:momentica/core/di/momentica_style.dart';
 import 'package:momentica/core/layout/momentica_layout.dart';
 import 'package:momentica/core/provider/text_field_focus_provider.dart';
 import 'package:momentica/core/type/suffix_type.dart';
+import 'package:momentica/core/util/number_formatter.dart';
 
-class MyUserEditNameScreen extends ConsumerStatefulWidget {
-  const MyUserEditNameScreen({super.key});
+class MyAddressEditScreen extends ConsumerStatefulWidget {
+  const MyAddressEditScreen({super.key});
 
   @override
-  ConsumerState<MyUserEditNameScreen> createState() => _MyUserEditNameScreenState();
+  ConsumerState<MyAddressEditScreen> createState() => _MyAddressEditScreenState();
 }
 
-class _MyUserEditNameScreenState extends ConsumerState<MyUserEditNameScreen> {
+class _MyAddressEditScreenState extends ConsumerState<MyAddressEditScreen> {
   late TextEditingController nameController;
+  late TextEditingController postcodeController;
+  late TextEditingController addressController;
+  late TextEditingController detailAddressController;
+  late TextEditingController phoneController;
 
   late FocusNode nameFocusNode;
+  late FocusNode postcodeFocusNode;
+  late FocusNode addressFocusNode;
+  late FocusNode detailAddressFocusNode;
+  late FocusNode phoneFocusNode;
 
   @override
   void initState() {
     super.initState();
     nameController = TextEditingController();
+    postcodeController = TextEditingController();
+    addressController = TextEditingController();
+    detailAddressController = TextEditingController();
+    phoneController = TextEditingController();
+
     nameFocusNode = FocusNode();
+    postcodeFocusNode = FocusNode();
+    addressFocusNode = FocusNode();
+    detailAddressFocusNode = FocusNode();
+    phoneFocusNode = FocusNode();
   }
 
   @override
   void dispose() {
     nameController.dispose();
+    postcodeController.dispose();
+    addressController.dispose();
+    detailAddressController.dispose();
+    phoneController.dispose();
+
     nameFocusNode.dispose();
+    postcodeFocusNode.dispose();
+    addressFocusNode.dispose();
+    detailAddressFocusNode.dispose();
+    phoneFocusNode.dispose();
     super.dispose();
   }
 
@@ -53,7 +80,7 @@ class _MyUserEditNameScreenState extends ConsumerState<MyUserEditNameScreen> {
               ),
               const SizedBox(width: 8),
               Text(
-                "이름",
+                "배송지 수정",
                 style: MomenticaTextStyle.caption1(
                   color: MomenticaColor.black,
                 ),
@@ -73,7 +100,7 @@ class _MyUserEditNameScreenState extends ConsumerState<MyUserEditNameScreen> {
             radius: 8,
             backgroundColor: MomenticaColor.main,
             content: Text(
-              "이름 변경",
+              "완료",
               style: MomenticaTextStyle.button1(
                 color: MomenticaColor.white,
               ),
@@ -86,14 +113,54 @@ class _MyUserEditNameScreenState extends ConsumerState<MyUserEditNameScreen> {
           padding: const EdgeInsets.all(24),
           child: Column(
             children: [
-              /// 이름 입력
+              /// 주문자 이름 입력
               MomenticaTextField(
                 controller: nameController,
                 focusNode: nameFocusNode,
-                caption: "이름",
-                hintText: "본명을 입력해주세요.",
+                hintText: "이름",
                 type: SuffixType.none,
+              ),
+              const SizedBox(height: 24),
+
+              /// 주문자 우편번호 입력
+              MomenticaTextField(
+                controller: postcodeController,
+                focusNode: postcodeFocusNode,
+                hintText: "우편번호",
+                type: SuffixType.none,
+                buttonContent: "우편번호 검색",
+                buttonEvent: () {},
+                buttonWidth: 90,
+              ),
+              const SizedBox(height: 24),
+
+              /// 주소 입력
+              MomenticaTextField(
+                controller: addressController,
+                focusNode: addressFocusNode,
+                hintText: "주소",
+                type: SuffixType.none,
+              ),
+              const SizedBox(height: 24),
+
+              /// 상세 주소 입력
+              MomenticaTextField(
+                controller: detailAddressController,
+                focusNode: detailAddressFocusNode,
+                hintText: "상세 주소",
+                type: SuffixType.none,
+              ),
+              const SizedBox(height: 24),
+
+              /// 주문자 전화번호 입력
+              MomenticaTextField(
+                controller: phoneController,
+                focusNode: phoneFocusNode,
+                hintText: "전화번호",
+                type: SuffixType.none,
+                textInputType: TextInputType.number,
                 textInputAction: TextInputAction.done,
+                textInputFormatter: NumberFormatter(),
               ),
               SizedBox(height: MediaQuery.of(context).viewInsets.bottom),
             ],

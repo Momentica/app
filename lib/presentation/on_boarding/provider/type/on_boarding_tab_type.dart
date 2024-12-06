@@ -1,6 +1,6 @@
 import 'package:momentica/core/di/momentica_style.dart';
 
-enum OnBoardingPageType {
+enum OnBoardingTabType {
   main(
     offset: -1,
     image: "$imageOnBoardingAsset/on_boarding_main_image.png",
@@ -17,7 +17,7 @@ enum OnBoardingPageType {
   final double offset;
   final String image;
 
-  const OnBoardingPageType({
+  const OnBoardingTabType({
     required this.offset,
     required this.image,
   });

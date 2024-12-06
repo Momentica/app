@@ -19,6 +19,7 @@ class MyUserInfoWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        /// 제목
         Text(
           caption,
           style: MomenticaTextStyle.label1(
@@ -41,12 +42,15 @@ class MyUserInfoWidget extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                /// value (initial)
                 Text(
                   value,
                   style: MomenticaTextStyle.caption2(
                     color: MomenticaColor.black,
                   ),
                 ),
+
+                /// move event
                 MomenticaGesture(
                   event: () => event(),
                   child: SvgPicture.asset(

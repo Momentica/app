@@ -16,7 +16,8 @@ class MyUserEditPhoneScreen extends ConsumerStatefulWidget {
   const MyUserEditPhoneScreen({super.key});
 
   @override
-  ConsumerState<MyUserEditPhoneScreen> createState() => _MyUserEditPhoneScreenState();
+  ConsumerState<MyUserEditPhoneScreen> createState() =>
+      _MyUserEditPhoneScreenState();
 }
 
 class _MyUserEditPhoneScreenState extends ConsumerState<MyUserEditPhoneScreen> {
@@ -81,16 +82,11 @@ class _MyUserEditPhoneScreenState extends ConsumerState<MyUserEditPhoneScreen> {
             height: 52,
             radius: 8,
             backgroundColor: MomenticaColor.main,
-            content: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "휴대폰 번호 변경",
-                  style: MomenticaTextStyle.button1(
-                    color: MomenticaColor.white,
-                  ),
-                ),
-              ],
+            content: Text(
+              "휴대폰 번호 변경",
+              style: MomenticaTextStyle.button1(
+                color: MomenticaColor.white,
+              ),
             ),
           ),
         ),
@@ -101,10 +97,12 @@ class _MyUserEditPhoneScreenState extends ConsumerState<MyUserEditPhoneScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              /// 전화번호 입력
               MomenticaTextField(
                 controller: inputController,
                 focusNode: inputFocusNode,
                 caption: "전화번호",
+                hintText: "숫자만 입력해주세요.",
                 type: SuffixType.none,
                 textInputType: TextInputType.phone,
                 textInputFormatter: NumberFormatter(),
@@ -112,10 +110,13 @@ class _MyUserEditPhoneScreenState extends ConsumerState<MyUserEditPhoneScreen> {
                 buttonEvent: () {},
               ),
               const SizedBox(height: 32),
+
+              /// 인증번호 입력
               MomenticaTextField(
                 controller: confirmController,
                 focusNode: confirmFocusNode,
                 caption: "인증번호",
+                hintText: "전송된 번호를 입력해주세요.",
                 type: SuffixType.none,
                 textInputType: TextInputType.number,
                 buttonContent: "확인",
