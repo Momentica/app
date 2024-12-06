@@ -36,6 +36,7 @@ class _MyCounselorScreenState extends State<MyCounselorScreen>
   @override
   Widget build(BuildContext context) {
     return MomenticaLayout(
+      resizeToAvoidBottomInset: false,
       appBar: MomenticaAppBar(
         height: 56,
         title: Padding(
