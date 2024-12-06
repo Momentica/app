@@ -7,6 +7,7 @@ class MomenticaLayout extends StatelessWidget {
   final Widget child;
   final Widget? floatingActionButton, bottomSheet, bottomNavigationBar;
   final FloatingActionButtonLocation? floatingActionButtonLocation;
+  final bool? resizeToAvoidBottomInset;
 
   const MomenticaLayout({
     super.key,
@@ -17,11 +18,13 @@ class MomenticaLayout extends StatelessWidget {
     this.bottomSheet,
     this.bottomNavigationBar,
     this.floatingActionButtonLocation,
+    this.resizeToAvoidBottomInset = true,
   });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: resizeToAvoidBottomInset,
       backgroundColor: backgroundColor ?? MomenticaColor.white,
       appBar: appBar,
       body: SafeArea(
