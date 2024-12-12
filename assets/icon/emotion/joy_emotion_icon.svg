@@ -1,0 +1,29 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_388_4346)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M35.6567 69.6095C35.5613 69.5906 35.4536 69.5681 35.3356 69.5414C32.7353 69.4127 28.7693 68.7122 25.261 65.2786C21.4343 61.5333 19.047 57.1272 17.446 52.8922C14.8573 46.0448 13.3539 36.8544 18.0104 28.1084C20.8481 22.7783 25.1527 19.3499 28.6508 16.9327C32.0326 14.596 37.4207 11.0512 43.9106 10.182C46.9207 9.77887 52.2438 9.64387 56.6125 14.2658C59.6195 17.447 61.3435 21.1243 62.4524 24.1802C65.1701 31.6686 65.3268 39.4866 65.051 45.9228C64.8278 51.1299 62.9778 57.8956 59.0195 62.7728C58.9747 62.828 58.9228 62.8926 58.8642 62.9656C58.29 63.681 57.073 65.1976 55.5893 66.46C53.8051 67.978 50.8667 69.8264 46.8551 69.8799C47.2142 69.8751 43.6853 69.991 41.7355 69.9992C40.5312 70.0043 39.1268 69.9872 37.8841 69.8956C37.2877 69.8517 36.4819 69.774 35.6567 69.6095Z" fill="#FFECAE"/>
+<g filter="url(#filter0_f_388_4346)">
+<path d="M51.6523 44.8C53.1477 44.8 54.36 43.4324 54.36 41.7455C54.36 40.0585 53.1477 38.6909 51.6523 38.6909C50.1569 38.6909 48.9446 40.0585 48.9446 41.7455C48.9446 43.4324 50.1569 44.8 51.6523 44.8Z" fill="#FDC0C5"/>
+</g>
+<g filter="url(#filter1_f_388_4346)">
+<path d="M28.2678 44.8C29.7632 44.8 30.9754 43.4324 30.9754 41.7455C30.9754 40.0585 29.7632 38.6909 28.2678 38.6909C26.7723 38.6909 25.5601 40.0585 25.5601 41.7455C25.5601 43.4324 26.7723 44.8 28.2678 44.8Z" fill="#FDC0C5"/>
+</g>
+<path d="M35.76 43.3813C38.8062 44.9086 40.837 44.9086 43.8832 43.3813" stroke="#58514E" stroke-width="1.44" stroke-linecap="round"/>
+<path d="M32.1256 37.5038C31.9108 37.4823 31.8 37.1186 31.8 36.9467C31.8 36.5462 32.3609 36.2182 32.6759 36.5138C32.7891 36.6201 32.9198 36.9047 32.8454 37.0658C32.7824 37.2023 32.3664 37.5038 32.242 37.5038" stroke="#58514E" stroke-width="1.52669" stroke-linecap="round"/>
+<path d="M46.5255 37.5038C46.3107 37.4823 46.2 37.1186 46.2 36.9467C46.2 36.5462 46.7608 36.2182 47.0758 36.5138C47.189 36.6201 47.3197 36.9047 47.2453 37.0658C47.1823 37.2023 46.7664 37.5038 46.6419 37.5038" stroke="#58514E" stroke-width="1.52669" stroke-linecap="round"/>
+</g>
+<defs>
+<filter id="filter0_f_388_4346" x="43.7126" y="33.4589" width="15.8793" height="16.5729" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2.616" result="effect1_foregroundBlur_388_4346"/>
+</filter>
+<filter id="filter1_f_388_4346" x="20.3281" y="33.4589" width="15.8793" height="16.5729" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2.616" result="effect1_foregroundBlur_388_4346"/>
+</filter>
+<clipPath id="clip0_388_4346">
+<rect width="50.4" height="60" fill="white" transform="translate(15 10)"/>
+</clipPath>
+</defs>
+</svg>

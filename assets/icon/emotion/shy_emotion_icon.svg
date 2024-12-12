@@ -1,0 +1,33 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_388_4380)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M35.6567 69.6095C35.5613 69.5906 35.4536 69.5681 35.3356 69.5414C32.7353 69.4127 28.7693 68.7122 25.261 65.2786C21.4343 61.5333 19.047 57.1272 17.446 52.8922C14.8573 46.0448 13.3539 36.8544 18.0104 28.1084C20.8481 22.7783 25.1527 19.3499 28.6508 16.9327C32.0326 14.596 37.4207 11.0512 43.9106 10.182C46.9207 9.77887 52.2438 9.64387 56.6125 14.2658C59.6195 17.447 61.3435 21.1243 62.4524 24.1802C65.1701 31.6686 65.3268 39.4866 65.051 45.9228C64.8278 51.1299 62.9778 57.8956 59.0195 62.7728C58.9747 62.828 58.9228 62.8926 58.8642 62.9656C58.29 63.681 57.073 65.1976 55.5893 66.46C53.8051 67.978 50.8667 69.8264 46.8551 69.8799C47.2142 69.8751 43.6853 69.991 41.7355 69.9992C40.5312 70.0043 39.1268 69.9872 37.8841 69.8956C37.2877 69.8517 36.4819 69.774 35.6567 69.6095Z" fill="#FFCCDD"/>
+<g filter="url(#filter0_f_388_4380)">
+<path d="M51.8925 43.7092C53.3879 43.7092 54.6002 42.3416 54.6002 40.6546C54.6002 38.9677 53.3879 37.6001 51.8925 37.6001C50.3971 37.6001 49.1848 38.9677 49.1848 40.6546C49.1848 42.3416 50.3971 43.7092 51.8925 43.7092Z" fill="#FF8CB2"/>
+</g>
+<g filter="url(#filter1_f_388_4380)">
+<path d="M28.5077 43.7092C30.0032 43.7092 31.2154 42.3416 31.2154 40.6546C31.2154 38.9677 30.0032 37.6001 28.5077 37.6001C27.0123 37.6001 25.8 38.9677 25.8 40.6546C25.8 42.3416 27.0123 43.7092 28.5077 43.7092Z" fill="#FF8CB2"/>
+</g>
+<path d="M30.5112 36.9434C30.5718 37.4614 30.6 37.6002 31.1997 38.2004C31.8886 38.5258 32.4995 38.5695 33.3059 38.4752C34.365 38.3512 34.942 37.8068 35.2616 37.0522" stroke="#3C3B3A" stroke-width="1.44" stroke-linecap="round"/>
+<path d="M46.2 36.9468C46.2606 37.4647 46.2888 37.6037 46.8884 38.2038C47.5773 38.5292 48.1882 38.5729 48.9946 38.4785C50.0538 38.3546 50.6307 37.8102 50.9503 37.0556" stroke="#3C3B3A" stroke-width="1.44" stroke-linecap="round"/>
+<path d="M38.552 41.6554C40.0674 41.6554 41.3997 41.8005 43.2738 41.3301" stroke="#3C3B3A" stroke-width="1.44" stroke-linecap="round"/>
+<path d="M27.8775 40.915C27.847 41.1517 27.7352 41.3791 27.6664 41.6059C27.6124 41.784 27.5751 41.9632 27.5608 42.1485" stroke="#FF8CB2" stroke-width="0.6" stroke-linecap="round"/>
+<path d="M29.4277 41.3818V42.332" stroke="#FF8CB2" stroke-width="0.6" stroke-linecap="round"/>
+<path d="M51.4041 40.6094V41.8892" stroke="#FF8CB2" stroke-width="0.6" stroke-linecap="round"/>
+<path d="M52.8067 40.9141L52.561 42.17" stroke="#FF8CB2" stroke-width="0.6" stroke-linecap="round"/>
+</g>
+<defs>
+<filter id="filter0_f_388_4380" x="43.9528" y="32.3681" width="15.8793" height="16.5729" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2.616" result="effect1_foregroundBlur_388_4380"/>
+</filter>
+<filter id="filter1_f_388_4380" x="20.568" y="32.3681" width="15.8793" height="16.5729" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2.616" result="effect1_foregroundBlur_388_4380"/>
+</filter>
+<clipPath id="clip0_388_4380">
+<rect width="50.4" height="60" fill="white" transform="translate(15 10)"/>
+</clipPath>
+</defs>
+</svg>
