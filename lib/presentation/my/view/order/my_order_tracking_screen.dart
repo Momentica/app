@@ -41,10 +41,13 @@ class MyOrderTrackingScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            /// 배송 현황
             MyOrderTrackingInfoWidget(),
             SizedBox(height: 12),
+            /// 베송 상품 정보
             MyOrderTrackingProductInfoWidget(),
             SizedBox(height: 12),
+            /// 배송 정보
             MyOrderTrackingDeliveryInfoWidget(),
           ],
         ),

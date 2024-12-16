@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:momentica/core/component/momentica_button.dart';
 import 'package:momentica/core/component/momentica_outlined_button.dart';
-import 'package:momentica/core/di/momentica_router.dart';
 import 'package:momentica/core/di/momentica_style.dart';
 
+/// 주요 상품 정보
 class MyOrderDetailMainInfoWidget extends StatelessWidget {
   const MyOrderDetailMainInfoWidget({super.key});
 
@@ -16,6 +15,7 @@ class MyOrderDetailMainInfoWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          /// 상품 정보
           Row(
             children: [
               SvgPicture.asset(
@@ -52,6 +52,7 @@ class MyOrderDetailMainInfoWidget extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 24),
+          /// 관련 기능
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

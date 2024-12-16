@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:momentica/core/component/momentica_gesture.dart';
 import 'package:momentica/core/di/momentica_style.dart';
 
+/// 주문자 정보
 class MyOrderDetailCustomerInfoWidget extends StatefulWidget {
   const MyOrderDetailCustomerInfoWidget({super.key});
 

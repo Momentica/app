@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:momentica/core/di/momentica_style.dart';
 
+/// 상품 정보
 class MyOrderTrackingProductInfoWidget extends StatelessWidget {
   const MyOrderTrackingProductInfoWidget({super.key});
 

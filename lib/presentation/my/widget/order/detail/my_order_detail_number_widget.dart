@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:momentica/core/di/momentica_style.dart';
 
+/// 주문 번호
 class MyOrderDetailNumberWidget extends StatelessWidget {
   const MyOrderDetailNumberWidget({super.key});
 

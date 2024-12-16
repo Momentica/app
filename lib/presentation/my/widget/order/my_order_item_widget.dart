@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:momentica/core/component/momentica_gesture.dart';
-import 'package:momentica/core/di/momentica_router.dart';
 import 'package:momentica/core/di/momentica_style.dart';
 
 class MyOrderItemWidget extends StatelessWidget {
@@ -63,6 +62,7 @@ class MyOrderItemWidget extends StatelessWidget {
             const SizedBox(height: 16),
             Row(
               children: [
+                /// 유동적으로 변ㅂ경됨
                 SvgPicture.asset(
                   "$diaryTickAsset/yellow_tick_diary.svg",
                   width: 48,

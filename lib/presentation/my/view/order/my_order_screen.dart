@@ -44,6 +44,7 @@ class MyOrderScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               return Padding(
                 padding: EdgeInsets.only(bottom: index == 5 - 1 ? 0 : 8),
+                /// 주문 내역 아이템 위젯
                 child: const MyOrderItemWidget(),
               );
             },

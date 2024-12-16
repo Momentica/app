@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:momentica/core/di/momentica_style.dart';
 
+/// 배송 정보
 class MyOrderTrackingDeliveryInfoWidget extends StatelessWidget {
   const MyOrderTrackingDeliveryInfoWidget({super.key});
 
@@ -30,6 +31,7 @@ class MyOrderTrackingDeliveryInfoWidget extends StatelessWidget {
             const SizedBox(height: 10),
             Row(
               children: [
+                /// 항목
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -49,6 +51,7 @@ class MyOrderTrackingDeliveryInfoWidget extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(width: 16),
+                /// 내용
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

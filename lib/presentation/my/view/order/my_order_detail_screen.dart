@@ -41,12 +41,16 @@ class MyOrderDetailScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            /// 주문 번호
             MyOrderDetailNumberWidget(),
             SizedBox(height: 16),
+            /// 주요 정보 (상품 정보.. etc)
             MyOrderDetailMainInfoWidget(),
             SizedBox(height: 16),
+            /// 주문자 정보
             MyOrderDetailCustomerInfoWidget(),
             SizedBox(height: 16),
+            /// 배송지 정보 (임시)
             MyOrderDetailCustomerInfoWidget(),
           ],
         ),
