@@ -46,16 +46,14 @@ class _PasswordResetScreenState extends ConsumerState<PasswordResetScreen> {
         height: 32,
         title: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 4),
-          child: Row(
-            children: [
-              /// Page Pop
-              MomenticaGesture(
-                event: () {
-                  context.pop();
-                },
-                child: SvgPicture.asset("$iconCoreAsset/left_arrow_icon.svg"),
-              ),
-            ],
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: MomenticaGesture(
+              event: () {
+                context.pop();
+              },
+              child: SvgPicture.asset("$iconCoreAsset/left_arrow_icon.svg"),
+            ),
           ),
         ),
       ),
