@@ -5,10 +5,12 @@ import 'package:momentica/core/component/momentica_app_bar.dart';
 import 'package:momentica/core/component/momentica_gesture.dart';
 import 'package:momentica/core/di/momentica_style.dart';
 import 'package:momentica/core/layout/momentica_layout.dart';
-import 'package:momentica/presentation/my/widget/order/my_order_item_widget.dart';
+import 'package:momentica/presentation/my/widget/order/detail/my_order_detail_customer_info_widget.dart';
+import 'package:momentica/presentation/my/widget/order/detail/my_order_detail_main_info_widget.dart';
+import 'package:momentica/presentation/my/widget/order/detail/my_order_detail_number_widget.dart';
 
-class MyOrderScreen extends StatelessWidget {
-  const MyOrderScreen({super.key});
+class MyOrderDetailScreen extends StatelessWidget {
+  const MyOrderDetailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class MyOrderScreen extends StatelessWidget {
               ),
               const SizedBox(width: 8),
               Text(
-                "주문 내역",
+                "주문 상세 내역",
                 style: MomenticaTextStyle.caption1(
                   color: MomenticaColor.black,
                 ),
@@ -34,21 +36,23 @@ class MyOrderScreen extends StatelessWidget {
           ),
         ),
       ),
-      child: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
-          child: ListView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            itemCount: 5,
-            itemBuilder: (context, index) {
-              return Padding(
-                padding: EdgeInsets.only(bottom: index == 5 - 1 ? 0 : 8),
-                /// 주문 내역 아이템 위젯
-                child: const MyOrderItemWidget(),
-              );
-            },
-          ),
+      child: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            /// 주문 번호
+            MyOrderDetailNumberWidget(),
+            SizedBox(height: 16),
+            /// 주요 정보 (상품 정보.. etc)
+            MyOrderDetailMainInfoWidget(),
+            SizedBox(height: 16),
+            /// 주문자 정보
+            MyOrderDetailCustomerInfoWidget(),
+            SizedBox(height: 16),
+            /// 배송지 정보 (임시)
+            MyOrderDetailCustomerInfoWidget(),
+          ],
         ),
       ),
     );
