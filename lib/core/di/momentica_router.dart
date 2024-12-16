@@ -19,6 +19,7 @@ import 'package:momentica/presentation/sign_in/view/sign_in_screen.dart';
 import 'package:momentica/presentation/sign_up/view/sign_up_screen.dart';
 import 'package:momentica/presentation/sign_up/view/sign_up_success_screen.dart';
 import 'package:momentica/presentation/splash/view/splash_screen.dart';
+import 'package:momentica/presentation/story/view/story_add_screen.dart';
 
 final GoRouter momenticaRouter = GoRouter(
   initialLocation: "/splash",
@@ -156,6 +157,14 @@ final GoRouter momenticaRouter = GoRouter(
       path: "/myTerms",
       builder: (context, state) {
         return const MyTermsScreen();
+      },
+    ),
+
+    /// Story
+    GoRoute(
+      path: "/storyAdd",
+      builder: (context, state) {
+        return const StoryAddScreen();
       },
     ),
   ],
