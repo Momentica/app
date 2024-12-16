@@ -45,6 +45,7 @@ flutter:
     - assets/icon/core/
     - assets/icon/auth/
     - assets/icon/my/
+    - assets/icon/emotion/
     - assets/image/core/
     - assets/image/on_boarding/
 
