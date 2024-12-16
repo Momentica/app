@@ -144,10 +144,16 @@ class _StoryAddScreenState extends ConsumerState<StoryAddScreen> {
                 type: SuffixType.eraser,
               ),
               const SizedBox(height: 28),
+
+              /// 일기 색상 지정
               const StoryDiaryColorSelectWidget(),
               const SizedBox(height: 28),
+
+              /// 일기 미리보기
               const StoryDiaryPreviewWidget(),
               const SizedBox(height: 28),
+
+              /// 이야기 키워드 지정
               const StoryDiaryKeywordSelectWidget(),
 
               /// FAB을 고려한 간격
