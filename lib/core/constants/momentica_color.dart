@@ -55,9 +55,9 @@ class MomenticaColor {
   static const Color brown20 = Color(0xFF926D4F);
   static const Color brown30 = Color(0xFF5F432C);
 
-  static const Color gray10 = Color(0xFFE1E1E1);
-  static const Color gray20 = Color(0xFFBFBFBF);
-  static const Color gray30 = Color(0xFF7B7B7B);
+  static const Color grey10 = Color(0xFFE1E1E1);
+  static const Color grey20 = Color(0xFFBFBFBF);
+  static const Color grey30 = Color(0xFF7B7B7B);
 
   static const Color navy10 = Color(0xFFA1BAFF);
   static const Color navy20 = Color(0xFF3561D6);
