@@ -28,7 +28,10 @@ class MainScreen extends StatelessWidget {
             ),
             Row(
               children: [
-                SvgPicture.asset("$iconCoreAsset/add_icon.svg"),
+                MomenticaGesture(
+                  event: () => context.push("/storyAdd"),
+                  child: SvgPicture.asset("$iconCoreAsset/add_icon.svg"),
+                ),
                 const SizedBox(width: 20),
                 MomenticaGesture(
                   event: () => context.push("/my"),
