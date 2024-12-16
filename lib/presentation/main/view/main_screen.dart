@@ -5,7 +5,7 @@ import 'package:momentica/core/component/momentica_app_bar.dart';
 import 'package:momentica/core/component/momentica_gesture.dart';
 import 'package:momentica/core/di/momentica_style.dart';
 import 'package:momentica/core/layout/momentica_layout.dart';
-import 'package:momentica/presentation/main/widget/app_bar/main_app_bar_my_toggle.dart';
+import 'package:momentica/presentation/main/widget/main_app_bar_my_toggle.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
